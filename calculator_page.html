@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            fieldset{
+                width: 520px;
+                background-color: darkgrey;
+                margin-top: 50px;
+                padding: 10px;
+                margin-left: 500px;
+                margin-right: 645px;
+            }
+            body{
+                background: white;
+            }
+            input{
+                width: 500px;
+                margin-left: 9px;
+                height: 50px;
+            }
+            .operator{
+                display: grid;
+                grid-template-columns: 25% 25% 25% 25%;
+                padding: 10px;
+            }
+            .operator div {
+                background-color: #f1f1f1;
+                border: 1px solid black;
+                padding: 10px;
+                font-size: 30px;
+                text-align: center;
+            }
+            #clear-button{
+                background-color: red;
+                border-color: grey;
+            }
+            .num{
+                border-color: grey;
+            }
+            #operators{
+                background-color: black;
+                color: white;
+                border-color: grey;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+            <div class="display-box">
+                <input type="text">
+            </div>
+            <div class=operator>
+                <div class="num">7</div>
+                <div class="num">8</div>
+                <div class="num">9</div>
+                <div id="operators">+</div>
+
+                <div class="num">4</div>
+                <div class="num">5</div>
+                <div class="num">6</div>
+                <div id="operators">-</div>
+
+                <div class="num">1</div>
+                <div class="num">2</div>
+                <div class="num">3</div>
+
+                <div id="operators">X</div>
+                <div id="clear-button">C</div>
+                <div class="num">0</div>
+                <div id="operators">=</div>
+                <div id="operators">/</div>
+                
+            </div>
+        </fieldset>
+    </body>
+</html>
