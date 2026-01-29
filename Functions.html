@@ -1,0 +1,54 @@
+<html>
+    <head>
+        <title>
+            Functions in Java Srcipt
+        </title>
+    </head>
+    <body>
+        <h1>Functions in Java Srcipt</h1>
+        <script>
+            //1.Normal function 
+
+            function sum()
+            {
+                return "Pragathi";
+            };
+            document.write(sum()+ "<br>");
+
+            // 2. Parameters or Arguments  Functions
+            function Add( a , b)
+            {
+                return a+b;
+            };
+            document.write(Add(100 , 200)+ "<br>");
+
+            // 3. Parameters or Arguments with Value Functions
+            function Addition(a = 200 , b = 300)
+            {
+                return a+b;
+            }
+            document.write(Addition()+"<br>")
+
+            //4. Arrow Function in JS
+            let arrow = () => 
+            {
+                return "Keerthi";
+            };
+            document.write(arrow()+"<br>")
+
+            // Arrow Functions with Parameters
+            let para = ( a,b) =>
+            {
+                return a+b;
+            } 
+            document.write(para(600 , 600)+"<br>")
+
+            // Arrow Functions With Parameters with values
+            let value =(a = "Prgathi BR" , b = "Prakruthi BR") =>
+            {
+                return a+b;
+            };
+            document.write(value()+"<br>");
+        </script>
+    </body>
+</html>
