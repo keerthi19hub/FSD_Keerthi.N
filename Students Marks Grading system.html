@@ -1,0 +1,176 @@
+<html>
+<head>
+    <title>Student Marks Grading System</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: white;
+        }
+
+        .box{
+            width: 360px;
+            background-color: rgb(218, 216, 216);
+            padding: 20px;
+            margin: 80px auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px 10px gray;
+        }
+
+        input{
+            width: 95%;
+            padding: 8px;
+            margin: 6px 0;
+        }
+
+        button{
+            padding: 8px 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: lightgreen;
+           
+            
+          
+        }
+
+        .result p{
+            margin: 5px 0;
+        }
+        .buttons{
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+    <h2>Student Marks Grading System</h2>
+
+    <input type="text" id="regno" placeholder="Enter Register Number">
+    <input type="number" id="marks" placeholder="Enter Marks">
+
+    <br>
+    <div class="buttons">
+       <button onclick="submitData()">Submit</button>
+       <button onclick="refreshPage()">Refresh</button>
+    </div>
+    <div class="result">
+        <p>Name: <span id="name"></span></p>
+        <p>Register No: <span id="rno"></span></p>
+        <p>Semester: <span id="sem"></span></p>
+        <p>Course: <span id="course"></span></p>
+        <p>Grade: <span id="grade"></span></p>
+        <p id="error" style="color:red;"></p>
+    </div>
+</div>
+
+<script>
+    function submitData()
+    {
+        let reg = document.getElementById("regno").value;
+        let marks = document.getElementById("marks").value;
+
+        let name = "", sem = "", course = "", grade = "";
+
+        if(reg == "101"){
+            name = "Keerthi";
+            sem = "4th Sem";
+            course = "BCA";
+        }
+        else if(reg == "102"){
+            name = "Savi";
+            sem = "6th Sem";
+            course = "BSc";
+        }
+        else if(reg == "103"){
+            name = "Nanju";
+            sem = "2nd Sem";
+            course = "BCom";
+        }
+        else if(reg == "104"){
+            name = "Diya";
+            sem = "3rd Sem";
+            course = "MBA";
+        }
+        else if(reg == "105"){
+            name = "Bella";
+            sem = "5th Sem";
+            course = "BTech";
+        }
+        else if(reg == "106"){
+            name = "Lilly";
+            sem = "1st Sem";
+            course = "MCA";
+        }
+        else if(reg == "107"){
+            name = "Sita";
+            sem = "2nd Sem";
+            course = "B Pharma";
+        }
+        else if(reg == "108"){
+            name = "Gita";
+            sem = "4th Sem";
+            course = "D Pharma";
+        }
+        else if(reg == "109"){
+            name = "Rita";
+            sem = "6th Sem";
+            course = "BBA";
+        }
+        else if(reg == "110"){
+            name = "Kishan";
+            sem = "5th Sem";
+            course = "MBBS";
+        }
+
+
+        else{
+            document.getElementById("error").textContent = "Invalid Register Number";
+            return;
+        }
+
+
+        if(marks >= 95){
+            grade = "O";
+        }
+        else if(marks >= 90){
+            grade = "A+";
+        }
+        else if(marks >= 85){
+            grade = "A";
+        }
+        else if(marks >= 75){
+            grade = "B+";
+        }
+        else if(marks >= 70){
+            grade = "B";
+        }
+        else if(marks >= 65){
+            grade = "C";
+        }
+        else if(marks >= 50){
+            grade = "D";
+        }
+        else{
+            grade = "FAIL";
+        }
+
+        document.getElementById("name").textContent = name;
+        document.getElementById("rno").textContent = reg;
+        document.getElementById("sem").textContent = sem;
+        document.getElementById("course").textContent = course;
+        document.getElementById("grade").textContent = grade;
+        document.getElementById("error").textContent = "";
+    }
+
+    function refreshPage(){
+        location.reload();
+    }
+</script>
+
+</body>
+</html>

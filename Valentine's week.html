@@ -1,0 +1,138 @@
+<html>
+<head>
+    <title>Valentine's Special Week</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background: url(./valentines-day-zoom-backgrounds-hearts-1643038425.avif);
+            background-size: cover;
+        }
+
+        marquee{
+            background-color: #fadbe6;
+            color: #cc135d;
+            font-weight: bold;
+            border-radius: 12px;
+            padding: 5px;
+        }
+
+        fieldset{
+            width: 380px;
+            margin: 110px auto;
+            padding: 22px;
+            text-align: center;
+            background-color:rgb(253, 206, 213);
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .headingText{
+            color: #df155f;
+            margin-bottom: 10px;
+        }
+
+        .inputBox{
+            width: 80%;
+            padding: 9px;
+            margin: 12px 0;
+            border-radius: 7px;
+            border: 1px solid #a3a0a0;
+        }
+
+        .buttonCommon{
+            width: 150px;
+            padding: 9px;
+            margin: 6px;
+            border: none;
+            border-radius: 22px;
+            font-size: 15px;
+            cursor: pointer;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .buttonCheck{
+            background: linear-gradient(to right, rgb(221, 110, 147));
+        }
+
+        .buttonCheck:hover{
+            background: linear-gradient(to right, #f41b63, #ca155d);
+        }
+
+        .buttonClear{
+            background: linear-gradient(to right, palevioletred);
+        }
+
+        .buttonClear:hover{
+            background: linear-gradient(to right, #616161, #212121);
+        }
+
+        .resultArea{
+            margin-top: 20px;
+            font-size: 22px;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            background-color: #fce4ec;
+            color: #c71260;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<marquee>
+    <h2>❤️ Valentine's Week ❤️</h2>
+</marquee>
+
+<fieldset>
+    <h1 class="headingText">Valentine's Week</h1>
+
+    <label>Enter your day number:</label><br>
+    <input type="number" class="inputBox" id="dayCount" placeholder="1 to 8">
+
+    <br>
+    <button class="buttonCommon buttonClear" onclick="resetView()">Refresh</button><br>
+    <button class="buttonCommon buttonCheck" onclick="findDay()">Submit</button>
+
+    <div class="resultArea" id="resultText">
+        ✨ Your Special Day is ✨
+    </div>
+</fieldset>
+
+<script>
+    function findDay(){
+        let day = document.getElementById("dayCount").value;
+        let result = document.getElementById("resultText");
+
+        if(day == 1)
+            result.textContent = "🌹 Rose Day One rose,endless feelings.";
+        else if(day == 2)
+            result.textContent = "💍 Proposal Day Confess your love.";
+        else if(day == 3)
+            result.textContent = "🍫 Chocolate Day Sweeten your relationship.";
+        else if(day == 4)
+            result.textContent = "🧸 Teddy Day A hug in the form of a teddy.";
+        else if(day == 5)
+            result.textContent = "🤝 Promise Day Promises that last forever";
+        else if(day == 6)
+            result.textContent = "🫂 Hug Day Spread warmth with hugs";
+        else if(day == 7)
+            result.textContent = "😘 Kiss Day Lets heart meet gently.";
+        else if(day == 8)
+            result.textContent = "❤️ Valentine's Day A day to celebrate.";
+        else
+            result.textContent = "Please enter a valid day (1-8)";
+    }
+
+    function resetView(){
+        document.getElementById("dayCount").value = "";
+        document.getElementById("resultText").textContent =
+            "✨ Your Special Day is ✨";
+    }
+</script>
+
+</body>
+</html>
