@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>Event Handler's in JS</title>
+        <style>
+            body{
+                text-align: center;
+                background:url(./1last.jpeg);
+                background-size: cover;
+                
+            
+                
+            }
+            div{
+                margin-top: 150px;
+                margin-top: 50px;
+            }
+            fieldset{
+                width: 500px;
+                margin-left: 500px;
+                margin-top: 200px;
+                border-radius: 10px;
+                box-shadow: 2px 2px 3px 3px black;
+                background-color:white;
+                box-shadow: black;
+            }
+            button{
+                padding: 5px;
+                width: 70px;
+                margin-left: 60px;
+                background-color:lightgreen;
+                border-radius: 5px;
+            }
+            button:hover{
+                background-color: whitesmoke;
+            }
+        </style>
+    </head>
+    <body>
+        <fieldset>
+        <div>
+        <h1>Login</h1>
+        <label>Username:</label>
+        <input type="text" id="username"><br><br>
+        <label>Password:</label>
+        <input type="password" id="password"><br><br>
+
+        <button onclick="Event()">LogIn</button>
+        <p id="result"></p>
+        </div>
+
+        <script>
+            function Event(){
+                // alert("Hello Keerthi");
+                var username = document.getElementById("username").value;
+                var password = document.getElementById("password").value;
+
+                if(username == "Keerthi" && password == "123"){
+                    document.getElementById("result").innerHTML = "Login Successfully!!";
+                    // document.writeln("Login Successfully!!");
+                    result.style.color = "green";
+
+                }else{
+                    document.getElementById("result").innerHTML = "Login Failed";
+                    result.style.color = "red";
+
+
+                    // document.writeln("Login Failed");
+
+
+                }
+
+
+            }
+        
+        </script>
+        </fieldset>
+    </body>
+</html>
+
+
